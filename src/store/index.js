@@ -1,7 +1,12 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore, combineReducers } from "redux";
+import thunkMiddleware from 'redux-thunk';
+import logger from 'redux-logger';
 
-import reducers from './ducks';
+import users from "./reducers/usersReducer";
 
-const store = createStore(reducers);
+const middleware = applyMiddleware(thunkMiddleware, logger);
+const store = createStore(combineReducers({
+    users
+}), {}, middleware);
 
 export default store;
