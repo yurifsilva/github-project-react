@@ -15,7 +15,7 @@ class RepositoriesComponent extends Component {
     render() {
         const { Repositories } = this.props;
         return (
-            <section className="users-section">
+            <section>
                 <ul>
                     {Repositories.map(Repositorie => (
                         <RepositorieCard repositorie={Repositorie} key={Repositorie.id} />

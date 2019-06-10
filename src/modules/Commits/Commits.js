@@ -9,8 +9,8 @@ import "../../styles/css/Users.css";
 
 class CommitsComponent extends Component {
     componentDidMount() {
-        this.props.addCommits(this.props.match.params.login);
-        console.log(this);
+        console.log(this.props.match.params);
+        this.props.addCommits(this.props.match.params.repositorie, this.props.match.params.login);
     }
 
     render() {

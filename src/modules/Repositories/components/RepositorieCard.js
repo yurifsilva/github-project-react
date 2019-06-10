@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../styles/css/UserCard.css';
+import '../../../styles/css/RepositorieCard.css';
 import { Link } from "react-router-dom";
 
 class RepositorieCard extends React.Component {
@@ -7,8 +7,12 @@ class RepositorieCard extends React.Component {
         const { repositorie } = this.props;
         return (
             <Link to={`/commits/${repositorie.owner.login}/${repositorie.name}`}>
-                <li className="user-card">
-                    <p className="user-card-name">{repositorie.name}</p>
+                <li>
+                    <p>{repositorie.name}</p>
+                    <div className="infos">
+                        <span>Star: {repositorie.stargazers_count}</span>
+                        <span>Watchers: {repositorie.watchers_count}</span>
+                    </div>
                 </li>
             </Link>
         )
