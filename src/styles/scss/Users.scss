@@ -49,13 +49,15 @@ section form button {
 section ul {
     list-style: none;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 section ul li {
     line-height: 50px;
-    margin: 0 20px;
     color: #fff;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin: 10px;
 }

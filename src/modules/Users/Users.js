@@ -3,12 +3,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addUser } from "../../store/actions/UsersActions";
-
-// import GithubService from './../services/GithubService';
+import Card from './components/UserCard';
 
 import "../../styles/css/Users.css";
 
-class TodoList extends Component {
+class UsersComponent extends Component {
   componentDidMount() {
     this.props.addUser('yurifsilva');
   }
@@ -32,12 +31,7 @@ class TodoList extends Component {
 
         <ul>
           {Users.map(todo => (
-            <li key={todo.id}>
-              {todo.complete ? <s>{todo.login}</s> : todo.login}
-              <div>
-
-              </div>
-            </li>
+            <Card user={todo} key={todo.id} />
           ))}
         </ul>
       </section>
@@ -55,4 +49,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(TodoList);
+)(UsersComponent);
