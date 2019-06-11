@@ -60,6 +60,7 @@ section ul li {
   display: flex;
   align-items: center;
   margin: 10px;
+  width: auto;
 }
 
-/*# sourceMappingURL=users.css.map */
+/*# sourceMappingURL=Users.css.map */

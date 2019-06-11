@@ -1,0 +1,17 @@
+div {
+  max-width: 100%;
+  padding: 0 10px;
+}
+div p {
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 15px);
+  word-break: break-all;
+  white-space: nowrap;
+}
+div span {
+  color: red;
+}
+
+/*# sourceMappingURL=commitcard.css.map */

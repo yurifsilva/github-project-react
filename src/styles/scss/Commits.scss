@@ -1,0 +1,32 @@
+.commits-component {
+    form {
+        margin-bottom: 15px;
+    }
+
+    ul {
+        &.filtered {
+            .commit-card {
+                display: none;
+            }
+        }
+
+        li {
+            margin: 0;
+
+            &.commit-card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                font-size: 20px;
+                text-align: center;
+                max-width: 100%;
+                border-bottom: 1px solid gray;
+
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

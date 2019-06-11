@@ -10,23 +10,36 @@
   border-radius: 2px;
   flex-direction: column;
   cursor: pointer;
+  text-decoration: none;
 }
-.user-card-name {
+.user-card p {
+  display: flex;
   font-style: italic;
-  text-align: center;
+  justify-content: center;
   width: 100%;
   border-top: 1px ridge #666;
+  font-weight: 400;
+  margin-top: 10px;
+  padding: 10px 0;
+  line-height: 20px;
+  text-align: center;
+}
+.user-card p.user-card-name {
+  font-size: 20px;
   font-weight: 600;
 }
 .user-card-content {
+  display: flex;
+  justify-content: center;
   margin: 10px 0;
-  height: 100%;
+  flex: 1;
 }
 .user-card-content .avatar {
   max-width: 60px;
   width: 100%;
   height: auto;
+  max-height: 60px;
   border-radius: 50%;
 }
 
-/*# sourceMappingURL=usercard.css.map */
+/*# sourceMappingURL=UserCard.css.map */

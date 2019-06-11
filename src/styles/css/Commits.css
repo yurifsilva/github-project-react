@@ -1,0 +1,24 @@
+.commits-component form {
+  margin-bottom: 15px;
+}
+.commits-component ul.filtered .commit-card {
+  display: none;
+}
+.commits-component ul li {
+  margin: 0;
+}
+.commits-component ul li.commit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  max-width: 100%;
+  border-bottom: 1px solid gray;
+}
+.commits-component ul li.commit-card.active {
+  display: flex;
+}
+
+/*# sourceMappingURL=commits.css.map */

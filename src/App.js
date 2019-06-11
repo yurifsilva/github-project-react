@@ -10,6 +10,8 @@ import Users from "./modules/Users/Users";
 import Repositories from "./modules/Repositories/Repositories";
 import Commits from "./modules/Commits/Commits";
 
+import "./styles/css/App.css"
+
 const App = () => (
   <Provider store={store}>
     <Switch>

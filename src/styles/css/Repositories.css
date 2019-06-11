@@ -1,0 +1,12 @@
+.repositories-order {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+}
+.repositories-order button {
+  margin: 0 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=repositories.css.map */

@@ -3,13 +3,19 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { addUser } from "../../store/actions/UsersActions";
+import { resetCommits } from "../../store/actions/CommitsActions";
+import { resetRepositories } from "../../store/actions/RepositoriesActions";
 import Card from './components/UserCard';
 
 import "../../styles/css/Users.css";
 
 class UsersComponent extends Component {
   componentDidMount() {
-    this.props.addUser('yurifsilva');
+    if (this.props.Users.length === 0) {
+      this.props.addUser('yurifsilva');
+    }
+    this.props.resetCommits();
+    this.props.resetRepositories();
   }
 
   handleSubmit = async e => {
@@ -44,7 +50,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ addUser }, dispatch);
+  bindActionCreators({ addUser, resetCommits, resetRepositories }, dispatch);
 
 export default connect(
   mapStateToProps,
